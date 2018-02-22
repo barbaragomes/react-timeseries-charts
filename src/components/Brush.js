@@ -361,7 +361,7 @@ export default class Brush extends React.Component {
                 {this.renderOverlay()}
                 {(this.props.timeRanges || []).map((timeRange, idx) => {
                     return (
-                        <g>
+                        <g key={`brush_${idx}`}>
                             {this.renderBrush(timeRange, idx)}
                             {this.renderHandles(timeRange, idx)}
                         </g>
